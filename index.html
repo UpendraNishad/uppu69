@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UppU – Download & Setup</title>
+  <link rel="icon" type="image/png" href="uppu.jpg"/>
+  <style>
+    body {
+      background: linear-gradient(135deg, #061E40 0%, #19D2FD 100%);
+      color: #fff;
+      margin: 0;
+      font-family: 'Segoe UI', 'Montserrat', Arial, sans-serif;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      background: rgba(12, 23, 45, 0.92);
+      box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+      border-radius: 24px;
+      padding: 32px 24px 24px 24px;
+      text-align: center;
+    }
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 24px;
+      margin-top: -60px;
+      object-fit: cover;
+      border: 3px solid #19D2FD;
+      box-shadow: 0 8px 16px rgba(25,210,253,0.2);
+      background: #fff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin: 22px 0 0 0;
+      font-weight: bolder;
+      letter-spacing: 1.5px;
+      color: #19D2FD;
+      text-shadow: 0 2px 8px rgba(25,210,253,0.19);
+    }
+    .desc {
+      margin: 16px 0 18px 0;
+      font-size: 1.13rem;
+      color: #c8e9fa;
+      line-height: 1.5;
+    }
+    .features-title {
+      font-size: 1.21rem;
+      font-weight: bold;
+      color: #12caff;
+      margin: 22px 0 10px 0;
+      letter-spacing: 1.1px;
+      text-align: left;
+    }
+    .features {
+      background: rgba(25,210,253,0.07);
+      border-radius: 14px;
+      margin: 0 0 32px 0;
+      padding: 14px 18px 5px 32px;
+      text-align: left;
+      font-size: 1.13rem;
+      color: #b8e7fe;
+      box-shadow: 0 2px 10px rgba(25,210,253,0.07);
+      display: inline-block;
+      max-width: 420px;
+    }
+    .features ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    .features li {
+      margin: 0 0 8px 0;
+      padding: 0 0 0 2px;
+      font-size: 1.09rem;
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+    }
+    .features li .emoji {
+      font-size: 1.12em;
+      margin-right: 9px;
+      min-width: 1.6em;
+      text-align: center;
+    }
+    .download-btn {
+      display: inline-block;
+      margin: 6px 0 28px 0;
+      padding: 15px 40px;
+      border-radius: 28px;
+      font-size: 1.22rem;
+      background: linear-gradient(90deg, #19D2FD 15%, #1246B1 85%);
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 14px 0 rgba(25,210,253,0.24);
+      letter-spacing: 0.1em;
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .download-btn:hover {
+      background: linear-gradient(90deg, #1246B1 10%, #19D2FD 90%);
+      transform: scale(1.045);
+    }
+    .videos-title {
+      font-size: 1.14rem;
+      font-weight: bold;
+      color: #13edfd;
+      margin: 17px 0 15px 0;
+      letter-spacing: .08em;
+      text-align: left;
+    }
+    .video-card {
+      background: rgba(15,30,56,0.69);
+      border-radius: 17px;
+      margin-bottom: 22px;
+      box-shadow: 0 6px 32px 0 rgba(31,38,135,0.17);
+      padding: 12px 10px 20px 10px;
+      text-align: left;
+      overflow: hidden;
+      border: 1px solid rgba(25,210,253,0.08);
+    }
+    .video-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #18d8fa;
+      padding-left: 4px;
+      letter-spacing: 0.02em;
+      text-align: left;
+    }
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #091d2a;
+      box-shadow: 0 4px 20px 0 rgba(25,210,253,0.16);
+    }
+    .iframe-container iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border: none;
+      border-radius: 12px;
+    }
+    .footer {
+      margin-top: 22px;
+      font-size: 0.98rem;
+      color: #a0effe;
+      opacity: 0.8;
+      letter-spacing: 0.9px;
+    }
+    @media (max-width: 600px) {
+      .container {padding: 16px 6px;}
+      .logo {width: 90px;height:90px;margin-top:-45px;}
+      h1 {font-size: 1.28rem;}
+      .desc {font-size: 0.96rem;}
+      .features {padding:10px 3px 4px 10px;font-size:0.98rem;}
+      .features-title, .videos-title {font-size:1.04rem;}
+      .download-btn {font-size: 1.03rem;padding:12px 18px;}
+      .iframe-container {padding-bottom: 62%;}
+      .video-title {font-size: 0.95rem;}
+      .video-card {margin-bottom: 16px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="uppu.jpg" alt="UppU Logo" class="logo"/>
+    <h1>UppU: Live Streaming Tool</h1>
+    <div class="desc">
+      Make your live streams stand out! With powerful streaming tools directly on your Android screen—built for streamers. Lightning fast, Android-only, and always free.
+    </div>
+    <div class="features-title">
+      App Features
+    </div>
+    <div class="features">
+      <ul>
+        <li><span class="emoji">🖼️</span> Image/GIF Overlay</li>
+        <li><span class="emoji">✨</span> Subscriber Alert (Streamlabs or StreamElements)</li>
+        <li><span class="emoji">🔥</span> Live Subscriber Count</li>
+        <li><span class="emoji">🎙️</span> Mic Mute/Unmute</li>
+        <li><span class="emoji">🔆</span> Brightness Controller</li>
+        <li><span class="emoji">🔊</span> Volume Controller</li>
+      </ul>
+    </div>
+    <a class="download-btn" href="UppU.apk" download>
+      ⬇️ Download APK
+    </a>
+    <div class="videos-title">
+      Setup & Feature Guides
+    </div>
+    <div class="video-card">
+      <div class="video-title">How to Add Subscriber Count in Live Stream</div>
+      <div class="iframe-container">
+        <iframe src="https://www.youtube.com/embed/m9f9KdmIE3o" title="How to add subscriber count - UppU" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="video-title">Secret Feature of UppU App</div>
+      <div class="iframe-container">
+        <iframe src="https://www.youtube.com/embed/H5dZXqq92KM" title="Secret Feature of UppU" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="footer">
+      &copy; 2025 UppU App. Built with 💙 for Android streamers.<br>
+      <span style="opacity:0.52;">Powered by Netlify</span>
+    </div>
+  </div>
+</body>
+</html>
